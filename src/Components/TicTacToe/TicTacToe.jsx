@@ -53,14 +53,14 @@ const TicTacToe = () => {
 
 const won =(winner)=>{
     setLock(true);
-    if(winner==='x'){ titleRef.current.innerHTML = `Congratulations: <img src=${cross_icon}>`}
-    else {titleRef.current.innerHTML = `Congratulations: <img src=${circle_icon}>`}
+    if(winner==='x'){ titleRef.current.innerHTML = `WINNER IS <img src=${cross_icon}>`}
+    else {titleRef.current.innerHTML = `WINNER IS <img src=${circle_icon}>`}
 }
 
 const reset = (e) => {
     setLock(false);
     data = [ "","","","","","","","",""];
-    titleRef.current.innerHTML = 'TicTacToe Game in <span>React</span>';
+    titleRef.current.innerHTML = 'Tic-Tac-Toe Game';
     box_array.map((e)=>{
         e.current.innerHTML = "";
     })
@@ -69,7 +69,7 @@ const reset = (e) => {
    
   return (
     <div className="container">
-        <h1 ref={titleRef} className="title">TicTacToe Game in <span>React</span></h1>
+        <h1 ref={titleRef} className="title">Tic-Tac-Toe Game</h1>
         <div className="board">
             <div className="row1">
                 <div className="boxes" ref={box1} onClick={e => {toggle(e,0)}}></div>
